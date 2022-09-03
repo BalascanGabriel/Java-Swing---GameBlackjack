@@ -1,3 +1,6 @@
+import Games.CoinFlip.CoinSide;
+import Games.CoinFlip.Coinflip;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -31,7 +34,9 @@ public class CoinFlipMode extends JDialog {
                     JOptionPane.showMessageDialog(null,"You don't have enough money", "Error",JOptionPane.ERROR_MESSAGE);
                 }
                 else{
-
+                    CoinSide choice = CoinSide.valueOf((String)sideComboBox.getSelectedItem()) ;
+                    Coinflip game = new Coinflip(choice);
+                    game.start();
                 }
             }
 

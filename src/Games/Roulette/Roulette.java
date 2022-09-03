@@ -1,6 +1,8 @@
 package Games.Roulette;
 
-public class Roulette implements iGame{
+import Interfaces.iGame;
+
+public class Roulette implements iGame {
     @Override
     public void start() {
 

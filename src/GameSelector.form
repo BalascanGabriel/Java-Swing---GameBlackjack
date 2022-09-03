@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="SelectorPanel" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="553" height="400"/>
+      <xy x="20" y="20" width="629" height="400"/>
     </constraints>
     <properties>
       <background color="-15954551"/>
@@ -32,7 +32,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="24" style="1"/>
-          <text value="Games.Coinflip.Games.BlackJack.BlackJack"/>
+          <text value="BlackJack"/>
         </properties>
       </component>
       <component id="8ffb7" class="javax.swing.JButton" binding="btnRoulette">
@@ -41,7 +41,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="24" style="1"/>
-          <text value="Games.Roulette.Roulette"/>
+          <text value="Roulette"/>
         </properties>
       </component>
       <component id="6d59a" class="javax.swing.JButton" binding="btnCoinFlip">

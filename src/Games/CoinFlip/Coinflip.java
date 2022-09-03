@@ -1,4 +1,5 @@
 package Games.CoinFlip;
+
 import Interfaces.iGame;
 
 public class Coinflip implements iGame{
@@ -9,13 +10,14 @@ public class Coinflip implements iGame{
     }
     @Override
     public void start() {
-        if(choice.equals(CoinSide.HEADS)){
+        if(choice.equals(CoinSide.Heads)){
             System.out.println("Heads");
         }
         else {
             System.out.println("Tail");
         }
     }
+
 
     @Override
     public void stop() {
