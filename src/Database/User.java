@@ -1,3 +1,5 @@
+package Database;
+
 public class User {
     private String Name;
     private String Password;

@@ -32,7 +32,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="24" style="1"/>
-          <text value="Games.Coinflip.BlackJack"/>
+          <text value="Games.Coinflip.Games.BlackJack.BlackJack"/>
         </properties>
       </component>
       <component id="8ffb7" class="javax.swing.JButton" binding="btnRoulette">
@@ -41,7 +41,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="24" style="1"/>
-          <text value="Roulette"/>
+          <text value="Games.Roulette.Roulette"/>
         </properties>
       </component>
       <component id="6d59a" class="javax.swing.JButton" binding="btnCoinFlip">

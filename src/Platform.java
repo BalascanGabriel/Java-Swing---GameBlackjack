@@ -1,3 +1,7 @@
+import Database.DBManager;
+import Database.User;
+import Interfaces.iPlatform;
+
 import java.sql.SQLException;
 import java.util.Scanner;
 

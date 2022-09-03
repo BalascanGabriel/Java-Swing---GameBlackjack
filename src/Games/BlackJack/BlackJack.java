@@ -1,4 +1,8 @@
-public class BlackJack implements iGame{
+package Games.BlackJack;
+
+import Interfaces.iGame;
+
+public class BlackJack implements iGame {
 
     @Override
     public void start() {
