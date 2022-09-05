@@ -1,5 +1,7 @@
 package Database;
 
+import java.sql.SQLException;
+
 public class User {
     private String Name;
     private String Password;
@@ -34,8 +36,10 @@ public class User {
         return Balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(int balance) throws SQLException {
         this.Balance = balance;
+
+        DBManager.updateBalance(this.Name,balance);
     }
 
     public void setName(String name){this.Name = name;}

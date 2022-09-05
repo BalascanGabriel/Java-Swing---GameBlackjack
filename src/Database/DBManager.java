@@ -158,8 +158,16 @@ public class DBManager {
         return balance;
     }
 
-    public static void updateBalance(User user){
+    public static void updateBalance(String username, int value) throws SQLException {
        //TODO: UPDATE BALANCE FOR WIN/LOSE
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/blackjack", "root", "1234");
+
+        PreparedStatement statement = connection.prepareStatement("update users set balance=? where Name=?");
+        statement.setInt(1, value);
+        statement.setString(2, username);
+        statement.executeUpdate();
+        //Aici sa bag in pula mea in baza de date ce se updateaza gen
+
     }
 }
 

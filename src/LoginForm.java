@@ -13,6 +13,7 @@ public class LoginForm extends JDialog {
     private JButton btnCancel;
     private JButton btnLogin;
     private JPanel LoginPanel;
+    private JRadioButton rememberMe;
 
 
     public LoginForm(JFrame parent) {

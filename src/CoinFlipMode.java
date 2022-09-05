@@ -5,13 +5,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class CoinFlipMode extends JDialog {
     private JTextField betField;
     private JPanel CoinFlipPanel;
     private JTextField userNameField;
     private JTextField balanceField;
-    private JTextField textField4;
+    private JTextField flipRandom;
     private JButton btnCoinFlip;
     private JComboBox sideComboBox;
 
@@ -28,7 +29,7 @@ public class CoinFlipMode extends JDialog {
         btnCoinFlip.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(Integer.parseInt(betField.getText()) <= 0){
+                if(Integer.parseInt(betField.getText()) <= 0 || betField.getText() == null || betField.getText().equals("")){
                     JOptionPane.showMessageDialog(null,"Can't bet zero or negative amount", "Error",JOptionPane.ERROR_MESSAGE);
                 }else if(Integer.parseInt(betField.getText()) >= Platform.getUserBalance()) {
                     JOptionPane.showMessageDialog(null,"You don't have enough money", "Error",JOptionPane.ERROR_MESSAGE);
@@ -36,7 +37,15 @@ public class CoinFlipMode extends JDialog {
                 else{
                     CoinSide choice = CoinSide.valueOf((String)sideComboBox.getSelectedItem()) ;
                     Coinflip game = new Coinflip(choice);
-                    game.start();
+
+                    try {
+                        String randomGenerated = game.start(choice,Integer.parseInt(betField.getText()),Platform.getCurrentUser());
+                        flipRandom.setText(randomGenerated);
+                    } catch (SQLException ex) {
+                        throw new RuntimeException(ex);
+                    }
+
+                    balanceField.setText(Integer.toString(Platform.getUserBalance()));
                 }
             }
 

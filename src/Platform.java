@@ -87,6 +87,10 @@ public class Platform implements iPlatform {
 
     public static int getUserBalance(){ return currentUser.getBalance();}
 
+    public static User getCurrentUser(){
+        return currentUser;
+    }
+
     //TO DO :
     //To insert here login/register on platform
 }
