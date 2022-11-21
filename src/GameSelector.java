@@ -11,6 +11,7 @@ public class GameSelector extends JDialog {
     private JPanel SelectorPanel;
     private JTextField userTxtField;
     private JTextField balanceTxtField;
+    private JButton slotsButton;
 
     public GameSelector(JFrame parent) throws SQLException {
         super(parent);
@@ -41,7 +42,14 @@ public class GameSelector extends JDialog {
                 CoinFlipMode coinFlipMode = new CoinFlipMode(null);
             }
         });
-        setVisible(true);
 
+
+        slotsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Slot slot = new Slot(null);
+            }
+        });
+        setVisible(true);
     }
 }
