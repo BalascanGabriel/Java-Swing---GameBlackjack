@@ -8,7 +8,6 @@ public class MainWindow extends JDialog{
     private JButton btnLogin;
     private JPanel MainWindowForm;
 
-
     public MainWindow(Object o) {
         //super(parent);
         setTitle("Create a new account");
